@@ -1,0 +1,108 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+}
+
+#top-left {
+  display: inline-block;
+  position: fixed;
+  width: 50%;
+  height: 46%;
+  background-color: #eee;
+  top: 0;
+  left: 0;
+}
+
+#top-right {
+  display: inline-block;
+  position: fixed;
+  width: 50%;
+  height: 46%;
+  background-color: #333;
+  top: 0;
+  right: 0;
+}
+
+#bot-left {
+  display: inline-block;
+  position: fixed;
+  width: 50%;
+  height: 46%;
+  background-color: #ccc;
+  bottom: 8%;
+  left: 0;
+}
+
+#bot-right {
+  display: inline-block;
+  position: fixed;
+  width: 50%;
+  height: 46%;
+  background-color: #ddd;
+  bottom: 8%;
+  right: 0;
+}
+
+#ticker-bottom {
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  height: 8%;
+  background-color: blue;
+  bottom: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker {
+  display: inline-block;
+  height: 4rem;
+  line-height: 4rem;
+  white-space: nowrap;
+  padding-right: 100%;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+}
+.ticker_item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 2rem;
+  color: white;
+}
