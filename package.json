@@ -10,7 +10,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^5.0.0-alpha.2",
+    "express": "^4.14.0",
+    "path": "^0.12.7",
     "request": "^2.74.0",
     "socket.io": "^1.4.8",
     "twit": "^2.2.4"
